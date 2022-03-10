@@ -16,4 +16,4 @@ class Predictor(object):
     def predict(self, x):
         input_tensor = Tensor(x).astype(np.float32)
         output = self.net(input_tensor)
-        return np.array(output)
+        return output.asnumpy()
