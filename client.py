@@ -9,4 +9,4 @@ if __name__ == '__main__':
     data = {'params': params, 'arr': arr.tolist()}
     url = 'http://0.0.0.0:9097/predict'
     response = requests.post(url, json=data)
-    print(response)
+    print(response.content)
