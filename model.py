@@ -10,7 +10,7 @@ context.set_context(mode=context.GRAPH_MODE, device_target="CPU")
 class Predictor(object):
 
     def __init__(self):
-        self.graph = load("/content/drive/MyDrive/MINDSPORE/checkpoints/eik_model_m.mindir")
+        self.graph = load("../models/last_model.mindir")
         self.net = nn.GraphCell(self.graph)
 
     def predict(self, x):
